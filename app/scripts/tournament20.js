@@ -38,91 +38,91 @@ table20.innerHTML +=
 <tr class="text"><td>${raton.nombre}</td><td>${raton.victorias}</td><td>${raton.derrotas}</td><td>${raton.puntosFavor}</td><td>${raton.puntosContra}</td><td class="text-b">${raton.puntosTotales}</td></tr>
 `;
 
-// const j1 = document.getElementById("jornada1-container");
+const j1 = document.getElementById("jornada1-container");
 
-// for(let resultado of resultados){
-//     if(resultado.jornada == 1){
+for(let resultado of resultados){
+    if(resultado.jornada == 1){
 
-//     j1.innerHTML += 
-//     `<div class="score-container">
+    j1.innerHTML += 
+    `<div class="score-container">
 
-//         <span class="token-left"></span>
-//         <span class="local-player body-font">${resultado.jugadorLocal}</span>
-//         <span class="local-player--points body-font">${resultado.jugadorLocalPuntos}</span>
+        <span class="token-left"></span>
+        <span class="local-player body-font">${resultado.jugadorLocal}</span>
+        <span class="local-player--points body-font">${resultado.jugadorLocalPuntos}</span>
     
-//         <span class="token-right"></span>
-//         <span class="away-player body-font">${resultado.jugadorVisitante}</span>
-//         <span class="away-player--points body-font">${resultado.jugadorVisitantePuntos}</span>
+        <span class="token-right"></span>
+        <span class="away-player body-font">${resultado.jugadorVisitante}</span>
+        <span class="away-player--points body-font">${resultado.jugadorVisitantePuntos}</span>
 
-//     </div>` 
-// }
-// }
+    </div>` 
+}
+}
 
-// const j2 = document.getElementById("jornada2-container");
+const j2 = document.getElementById("jornada2-container");
 
-// for(let resultado of resultados){
-//     if(resultado.jornada == 2){
+for(let resultado of resultados){
+    if(resultado.jornada == 2){
 
-//     j2.innerHTML += 
-//     `<div class="score-container">
+    j2.innerHTML += 
+    `<div class="score-container">
 
-//         <span class="token-left"></span>
-//         <span class="local-player body-font">${resultado.jugadorLocal}</span>
-//         <span class="local-player--points body-font">${resultado.jugadorLocalPuntos}</span>
+        <span class="token-left"></span>
+        <span class="local-player body-font">${resultado.jugadorLocal}</span>
+        <span class="local-player--points body-font">${resultado.jugadorLocalPuntos}</span>
     
-//         <span class="token-right"></span>
-//         <span class="away-player body-font">${resultado.jugadorVisitante}</span>
-//         <span class="away-player--points body-font">${resultado.jugadorVisitantePuntos}</span>
+        <span class="token-right"></span>
+        <span class="away-player body-font">${resultado.jugadorVisitante}</span>
+        <span class="away-player--points body-font">${resultado.jugadorVisitantePuntos}</span>
 
-//     </div>` 
-// }
-// }
+    </div>` 
+}
+}
 
-// const j3 = document.getElementById("jornada3-container");
+const j3 = document.getElementById("jornada3-container");
 
-// for(let resultado of resultados){
-//     if(resultado.jornada == 3){
+for(let resultado of resultados){
+    if(resultado.jornada == 3){
 
-//     j3.innerHTML += 
-//     `<div class="score-container">
+    j3.innerHTML += 
+    `<div class="score-container">
 
-//         <span class="token-left"></span>
-//         <span class="local-player body-font">${resultado.jugadorLocal}</span>
-//         <span class="local-player--points body-font">${resultado.jugadorLocalPuntos}</span>
+        <span class="token-left"></span>
+        <span class="local-player body-font">${resultado.jugadorLocal}</span>
+        <span class="local-player--points body-font">${resultado.jugadorLocalPuntos}</span>
 
-//         <span class="token-right"></span>
-//         <span class="away-player body-font">${resultado.jugadorVisitante}</span>
-//         <span class="away-player--points body-font">${resultado.jugadorVisitantePuntos}</span>
+        <span class="token-right"></span>
+        <span class="away-player body-font">${resultado.jugadorVisitante}</span>
+        <span class="away-player--points body-font">${resultado.jugadorVisitantePuntos}</span>
 
-//     </div>` 
-// }
-// }
+    </div>` 
+}
+}
 
-// const homePoints = document.querySelectorAll('.local-player--points');
-// const homePlayers = document.querySelectorAll('.local-player');
-// const homeWinner = document.querySelectorAll('.token-left');
-// const awayPoints = document.querySelectorAll('.away-player--points');
-// const awayPlayers = document.querySelectorAll('.away-player');
-// const awayWinner = document.querySelectorAll('.token-right')
+const homePoints = document.querySelectorAll('.local-player--points');
+const homePlayers = document.querySelectorAll('.local-player');
+const homeWinner = document.querySelectorAll('.token-left');
+const awayPoints = document.querySelectorAll('.away-player--points');
+const awayPlayers = document.querySelectorAll('.away-player');
+const awayWinner = document.querySelectorAll('.token-right')
 
 
 
-// for(let homePoint of homePoints){
-//     let hP = homePoint.innerHTML.toLowerCase();
-//     if(hP == 5){
-//         homePoint.previousElementSibling.previousElementSibling.classList.add('winner-mark')
-//         homePoint.classList.add('winner')
-//         homePoint.previousElementSibling.classList.add('winner')
+for(let homePoint of homePoints){
+    let hP = homePoint.innerHTML.toLowerCase();
+    if(hP == 5){
+        homePoint.previousElementSibling.previousElementSibling.classList.add('winner-mark')
+        homePoint.classList.add('winner')
+        homePoint.previousElementSibling.classList.add('winner')
         
-//     }
-// }
+    }
+}
 
 
-// for(let awayPoint of awayPoints){
-//     let aP = awayPoint.innerHTML.toLowerCase();
-//     if(aP == 5){
-//         awayPoint.classList.add('winner');
-//         awayPoint.previousElementSibling.classList.add('winner')
-//         awayPoint.previousElementSibling.previousElementSibling.classList.add('winner-mark')
-//     }
-// }
+for(let awayPoint of awayPoints){
+    let aP = awayPoint.innerHTML.toLowerCase();
+    if(aP == 5){
+        awayPoint.classList.add('winner');
+        awayPoint.previousElementSibling.classList.add('winner')
+        awayPoint.previousElementSibling.previousElementSibling.classList.add('winner-mark')
+    }
+}

@@ -81,3 +81,124 @@
 #table20-body tr{
     line-height: 2;
 }
+.results-container{
+
+
+    .card{
+        width: 100%;
+        max-width: 628px;
+        min-height: 1200px;
+        padding: 30px;
+
+        .jornadas-container{
+            overflow-x: scroll;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            #jornada1-container, #jornada2-container, #jornada3-container{
+                min-width: 280px;
+                border: 2px solid $primary-color;
+                border-radius: 15px;
+                padding: 30px 0;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                scroll-snap-align: center;
+                height: 100%;
+
+                h3{
+                    width: 100%;
+                }
+        }
+
+            .score-container{
+                background-color: $neutral-color-a;
+                width: 100px;
+                height: 70px;
+                border-radius: 15px;
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+                @extend .text;
+                gap: 5px;
+                padding: 5px;
+                justify-items: center;
+                align-items: center;
+    
+                .winner{
+                    color: $primary-color-f;
+                    font-weight: 700;
+                }
+                .winner-mark{
+                    border-radius: 50%;
+                    background-color: $primary-color-f;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+// .card{
+//     padding: 30px 0;
+//     overflow-x: scroll;
+//     overscroll-behavior-x: contain;
+//     scroll-snap-type: x proximity;
+//     height: 100%;
+
+//     h2{
+//         width: 100%;
+//     }
+
+//     .jornadas-container{
+//         width: 280px;
+//         border: 2px solid $primary-color;
+//         border-radius: 15px;
+//         padding: 30px 0;
+//         margin-bottom: 20px;
+//         display: flex;
+
+//         h3{
+//             width: 100%;
+//             margin-bottom: 20px;
+//         }
+//         #jornada1-container, #jornada2-container, #jornada3-container{
+//             display: flex;
+//             flex-wrap: wrap;
+//             gap: 15px;
+//             align-items: center;
+//             justify-content: center;
+//             scroll-snap-align: center;
+//         }
+//         .score-container{
+//             background-color: $neutral-color-a;
+//             width: 100px;
+//             height: 70px;
+//             border-radius: 15px;
+//             display: grid;
+//             grid-template-columns: 1fr 2fr 1fr;
+//             @extend .text;
+//             gap: 5px;
+//             padding: 5px;
+//             justify-items: center;
+//             align-items: center;
+
+//             .winner{
+//                 color: $primary-color-f;
+//                 font-weight: 700;
+//             }
+//             .winner-mark{
+//                 border-radius: 50%;
+//                 background-color: $primary-color-f;
+//                 width: 10px;
+//                 height: 10px;
+//             }
+//         }
+//     }
+// }

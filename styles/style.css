@@ -49,7 +49,7 @@ a {
   font-size: 3.2rem;
 }
 
-.text, .text-b, .text-l, .text-lb, .tournament20-rank, .a-btn, .card-text {
+.text, .text-b, .text-l, .text-lb, .tournament20-rank, .a-btn, .card-text, .results-container .card .jornadas-container .score-container {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
 }
@@ -177,7 +177,7 @@ a {
 
 .footer {
   width: 100%;
-  height: 50px;
+  height: 30px;
   background-color: #17175F;
   position: fixed;
   bottom: 0;
@@ -296,5 +296,82 @@ a {
 
 #table20-body tr {
   line-height: 2;
+}
+
+.results-container .card {
+  width: 100%;
+  max-width: 628px;
+  min-height: 1200px;
+  padding: 30px;
+}
+
+.results-container .card .jornadas-container {
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 50px;
+}
+
+.results-container .card .jornadas-container #jornada1-container, .results-container .card .jornadas-container #jornada2-container, .results-container .card .jornadas-container #jornada3-container {
+  min-width: 280px;
+  border: 2px solid #4241D1;
+  border-radius: 15px;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  scroll-snap-align: center;
+  height: 100%;
+}
+
+.results-container .card .jornadas-container #jornada1-container h3, .results-container .card .jornadas-container #jornada2-container h3, .results-container .card .jornadas-container #jornada3-container h3 {
+  width: 100%;
+}
+
+.results-container .card .jornadas-container .score-container {
+  background-color: #F2F2FC;
+  width: 100px;
+  height: 70px;
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  gap: 5px;
+  padding: 5px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.results-container .card .jornadas-container .score-container .winner {
+  color: #26269E;
+  font-weight: 700;
+}
+
+.results-container .card .jornadas-container .score-container .winner-mark {
+  border-radius: 50%;
+  background-color: #26269E;
+  width: 10px;
+  height: 10px;
 }
 /*# sourceMappingURL=style.css.map */

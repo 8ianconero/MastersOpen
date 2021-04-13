@@ -56,6 +56,10 @@ a{
         @extend .text;
         font-size: 1.8rem;
     }
+    &-lb{
+        @extend .text-l;
+        font-weight: 700
+    }
 }
 .a-btn{
     @extend .text;
@@ -109,8 +113,8 @@ a{
     }
 }
 .medal{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     color: $neutral-color-j;
     display: flex;
@@ -128,6 +132,23 @@ a{
 .bronze{
     @extend .medal;
     background-color: rgb(201, 130, 50);
+}
+
+.tournament20-rank{
+    @extend .text-l;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 40px 160px auto;
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+
+    div:nth-child(5){
+        margin-bottom: 0;
+    }
+    .medal{
+        grid-column: 2/3;
+    }
 }
 .footer{
     width: 100%;

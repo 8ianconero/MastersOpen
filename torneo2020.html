@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masters Open</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Montserrat&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/67dffb54a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Torneo<br>2020</h1>
+        <a class="a-btn" href="marcador.html">Marcador</a>
+    </header>
+    <aside>
+        <div class="tournament20-container">
+            <h3 class="title-m">Posiciones</h3>
+            <div class="tournament20-rank">
+                <div class="medal gold">1&#186;</div>
+                <div id="position1"></div>
+
+                <div class="medal silver">2&#186;</div>
+                <div id="position2"></div>
+
+                <div class="medal bronze">3&#186;</div>
+                <div id="position3"></div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="card">
+                <h2 class="card-title">Tabla</h2>
+                <table class="table20">
+                    <thead class="table20-head">
+                        <tr>
+                            <th class="table-title text-lb">Jugador</th>
+                            <th class="table-title text-lb">V</th>
+                            <th class="table-title text-lb">D</th>
+                            <th class="table-title text-lb">PF</th>
+                            <th class="table-title text-lb">PC</th>
+                            <th class="table-title text-lb">T</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table20-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </aside>
+    <main>
+        <div class="results-container">
+            <div class="card">
+                <h2 class="card-title">Resultados</h2>
+                <div></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="./app/scripts/tournament20.js" type="module"></script>
+</body>
+</html>

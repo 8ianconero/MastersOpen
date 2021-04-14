@@ -2,6 +2,7 @@ html {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -11,8 +12,23 @@ html {
   padding: 0;
 }
 
+body {
+  background-color: #fafafa;
+}
+
 a {
   text-decoration: none;
+}
+
+.header-logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.header-logo img {
+  width: 170px;
+  height: 30px;
 }
 
 .header-title {
@@ -49,7 +65,26 @@ a {
   font-size: 3.2rem;
 }
 
-.text, .text-b, .text-l, .text-lb, .tournament20-rank, .a-btn, .card-text, .results-container .card .jornadas-container .score-container {
+@media (min-width: 48em) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto (73px)[8] auto;
+        grid-template-columns: auto repeat(8, 73px) auto;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 61.25em) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto (60px)[12] auto;
+        grid-template-columns: auto repeat(12, 60px) auto;
+  }
+}
+
+.text, .text-b, .text-l, .text-lb, .tournament20-rank, .a-btn, .card-text, .results-container .card .score-container {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
 }
@@ -90,7 +125,8 @@ a {
 
 .card {
   background-color: #E4E4F8;
-  min-width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 130px;
   border-radius: 15px;
   color: #8686E2;
@@ -274,9 +310,41 @@ a {
   margin-bottom: 20px;
 }
 
+@media (min-width: 48em) {
+  aside {
+    grid-column: 7/-2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (min-width: 61.25em) {
+  aside {
+    grid-column: 10/-2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 .tournament20-container {
   margin-bottom: 50px;
   text-align: center;
+}
+
+@media (min-width: 48em) {
+  .tournament20-container {
+    background-color: #E4E4F8;
+    border-radius: 15px;
+    padding: 30px 0;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .tournament20-container:hover {
+    background-color: #E4E4F8;
+    -webkit-box-shadow: 0 2px 20px 5px rgba(185, 185, 196, 0.2);
+            box-shadow: 0 2px 20px 5px rgba(185, 185, 196, 0.2);
+    color: #040410;
+  }
 }
 
 .tournament20-container h3 {
@@ -288,6 +356,24 @@ a {
   width: 300px;
   height: auto;
   padding: 30px;
+  color: #040410;
+}
+
+.table-container .card:hover {
+  background-color: #E4E4F8;
+  -webkit-box-shadow: 0 2px 20px 5px rgba(185, 185, 196, 0.2);
+          box-shadow: 0 2px 20px 5px rgba(185, 185, 196, 0.2);
+  color: #040410;
+}
+
+.table-container .card:hover > .card-title, .table-container .card:hover .card-text {
+  color: #040410;
+}
+
+@media (min-width: 48em) {
+  .table-container .card {
+    max-width: 270px;
+  }
 }
 
 .table20-head {
@@ -298,11 +384,59 @@ a {
   line-height: 2;
 }
 
+@media (min-width: 48em) {
+  main {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 5;
+    grid-column: 2/7;
+    grid-row: 1/auto;
+  }
+}
+
+@media (min-width: 61.25em) {
+  main {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 8;
+    grid-column: 2/10;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 .results-container .card {
   width: 100%;
   max-width: 628px;
-  min-height: 1200px;
-  padding: 30px;
+  height: auto;
+  padding: 30px 20px;
+  background-color: #fff;
+  color: #2E2EBE;
+}
+
+@media (min-width: 48em) {
+  .results-container .card {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 61.25em) {
+  .results-container .card {
+    height: 1400px;
+  }
+  .results-container .card h2 {
+    width: 100%;
+    height: 40px;
+  }
+}
+
+.results-container .card:hover {
+  -webkit-box-shadow: 0 2px 20px 5px rgba(185, 185, 196, 0.2);
+          box-shadow: 0 2px 20px 5px rgba(185, 185, 196, 0.2);
+}
+
+.results-container .card:hover > .card-title, .results-container .card:hover .card-text {
+  color: #2E2EBE;
 }
 
 .results-container .card .jornadas-container {
@@ -310,7 +444,6 @@ a {
   overscroll-behavior-x: contain;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,10 +451,34 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 50px;
+  gap: 30px;
+  width: 100%;
 }
 
-.results-container .card .jornadas-container #jornada1-container, .results-container .card .jornadas-container #jornada2-container, .results-container .card .jornadas-container #jornada3-container {
+@media (min-width: 48em) {
+  .results-container .card .jornadas-container {
+    max-height: 70vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overscroll-behavior-y: contain;
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 61.25em) {
+  .results-container .card .jornadas-container {
+    overflow: visible;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.results-container .card #jornada1-container, .results-container .card #jornada2-container, .results-container .card #jornada3-container {
   min-width: 280px;
   border: 2px solid #4241D1;
   border-radius: 15px;
@@ -337,16 +494,15 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 15px;
+  gap: 10px;
   scroll-snap-align: center;
-  height: 100%;
 }
 
-.results-container .card .jornadas-container #jornada1-container h3, .results-container .card .jornadas-container #jornada2-container h3, .results-container .card .jornadas-container #jornada3-container h3 {
+.results-container .card #jornada1-container h3, .results-container .card #jornada2-container h3, .results-container .card #jornada3-container h3 {
   width: 100%;
 }
 
-.results-container .card .jornadas-container .score-container {
+.results-container .card .score-container {
   background-color: #F2F2FC;
   width: 100px;
   height: 70px;
@@ -361,14 +517,15 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #8686E2;
 }
 
-.results-container .card .jornadas-container .score-container .winner {
+.results-container .card .score-container .winner {
   color: #26269E;
   font-weight: 700;
 }
 
-.results-container .card .jornadas-container .score-container .winner-mark {
+.results-container .card .score-container .winner-mark {
   border-radius: 50%;
   background-color: #26269E;
   width: 10px;

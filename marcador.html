@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masters Open</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Montserrat&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/67dffb54a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a class="header-logo"href="index.html">
+            <img src="./assets/img/mastersOpen.svg" alt="Masters Open Logo">
+        </a>
+    </header>
+
+    <section class="score">
+        <div class="score-points">
+            <!-- <div class="score-points__left"> -->
+                <button class="arrow" id="plus-left"><i class="fas fa-caret-up"></i></button>
+                <button class="score-font" id="score-left"></button>
+                <button class="arrow" id="minus-left"><i class="fas fa-caret-down"></i></button>
+            <!-- </div>
+
+            <div class="score-points__right"> -->
+                <button class="arrow" id="plus-right"><i class="fas fa-caret-up"></i></button>
+                <button class="score-font" id="score-right"></button>
+                <button class="arrow" id="minus-right"><i class="fas fa-caret-down"></i></button>
+            <!-- </div> -->
+
+            <div class="btn-container">
+                <button class="btn-reset btn-font" id="reset">Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./app/scripts/manualScore.js" type="module"></script>
+</body>
+</html>

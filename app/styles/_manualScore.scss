@@ -1,7 +1,26 @@
-
+.bg{
+    background-color: $primary-color;
+    height: 100%;
+    min-height: 100vh;
+}
 header {
     height: 50px;
-    position:static;
+
+    .header-logo{
+        height: 50px;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        i{
+            color: $neutral-color-a;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+        img{
+            margin-left: 20px;
+        }
+    }
 }
 .score-points{
     height: calc(100vh-50px);

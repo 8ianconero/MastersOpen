@@ -9,8 +9,16 @@
     
     .header-logo{
         grid-row: 1/2;
-        justify-self: start;
-        align-content: center;
+        justify-self: flex-start;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+        i{
+            color: $neutral-color-a;
+            margin-left: 10px;
+            font-size: 14px;
+        }
         img{
             margin-left: 20px;
         }

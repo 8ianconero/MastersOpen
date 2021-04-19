@@ -4,10 +4,15 @@ aside{
     display: flex;
     flex-direction: column;
 
+    @include breakpoint-up(large){
+        grid-column: 10/-2;
+    }
+
     .card{
         background-color: $neutral-color-a;
         padding: 30px;
         min-width: 280px;
+        height: auto;
     
         .title-m{
             color: $primary-color-e;
@@ -20,18 +25,144 @@ aside{
             display: flex;
             flex-direction: column;
             align-items: center;
+            border-collapse: collapse;
+            text-align: left;
             thead{
                 color: $neutral-color-h;
+                th{
+                    padding: 2px;
+                }
             }
             tbody{
                 color: $neutral-color-f;
                 line-height: 2;
-                padding: 5px;
+                
+                td{
+                    padding: 2px;
+                }
             }
         }
     }
 }
-.results-container{
-    grid-row: 1/5;
+
+.main-jornada{
+    background-color: #fff;
+    padding: 30px 0;
+    grid-row: 1/4;
     grid-column: 2/7;
+    height: auto;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint-up(medium){
+        border-radius: 15px;
+    }
+
+    @include breakpoint-up(large){
+        grid-column: 2/10;
+    }
+
+    .card-title{
+        color: $primary-color-e;
+    }
+
+    .card-results{
+        overflow-x: scroll;
+        background-color: inherit;
+        border-radius: 0;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 30px;
+    
+        @include breakpoint-up(medium){
+            flex-wrap: wrap;
+            overflow-x: hidden;
+        }
+    
+        .jornadas-container{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+    
+            @include breakpoint-up(medium){
+                flex-wrap: wrap;
+            }
+        }
+    
+        .jornada-item{
+            border: 1px solid $primary-color-b;
+            background-color: #fff;
+            border-radius: 20px;
+            min-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px 5px;
+            margin: 0 10px;
+            scroll-snap-align: center;
+    
+            @include breakpoint-up(medium){
+                margin-bottom: 30px;
+                
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+    
+            h3{
+                width: 100%;
+                color: $primary-color-d;
+            }
+    
+            .score-container{
+                background-color:#fff;
+                height: 62px;
+                width: 80px;
+                border-radius: 8px;
+                box-shadow: 0 4px 4px 0px rgba($color: $neutral-color-h, $alpha: .20);
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                grid-column: 10px 30px 20px;
+                grid-row: 1fr 1fr;
+                @extend .text;
+                color: $neutral-color-d;
+                padding: 0 10px;
+                
+                &:hover{
+                    cursor: default;
+                    box-shadow: 0 2px 2px 0px rgba($color: $neutral-color-h, $alpha: .10);
+                }
+    
+                .winner{
+                    @extend .text-b;
+                    color: $primary-color-f;
+                }
+                .winner-mark{
+                    background-color: $primary-color-f;
+                    border-radius: 50%;
+                    height: 8px;
+                    width: 8px;
+                }
+                .token-left{
+                    grid-column: 1/2;
+                }
+                .local-player{
+                    grid-column: 2/3;
+                }
+                .local-player--points{
+                    grid-column: 3/4;
+                }
+                .token-right{
+                    grid-column: 1/2;
+                }
+                .away-player{
+                    grid-column: 2/3;
+                }
+                .away-player--points{
+                    grid-column: 3/4;
+                }
+            }
+        }
+    }
 }

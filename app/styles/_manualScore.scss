@@ -1,13 +1,7 @@
-body{
-    background-color: $primary-color;
-}
+
 header {
     height: 50px;
     position:static;
-    a{
-        margin-top: 10px;
-        margin-left: 20px;
-    }
 }
 .score-points{
     height: calc(100vh-50px);
@@ -58,7 +52,7 @@ header {
         background-color: $secondary-color-a;
         border-radius: 5px;
         line-height: 40px;
-        box-shadow: 0 2px 20px 0px rgba($color: $neutral-color-j, $alpha: .10);
+        box-shadow: 0 2px 20px 0px rgba($color: $neutral-color-h, $alpha: .10);
         margin-left: auto;
         margin-right: auto;
     }
